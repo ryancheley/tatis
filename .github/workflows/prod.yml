@@ -30,7 +30,7 @@ jobs:
 
             cp /home/tatis/.env /home/tatis/tatisjr/tatisjr/.env
 
-            pip -q install -r /home/tatis/tatisjr/requirements.txt
+            pip -q install -r /home/tatis/tatisjr/requirements/production.txt
 
             python /home/tatis/tatisjr/manage.py migrate
 

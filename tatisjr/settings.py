@@ -29,7 +29,16 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
 
 
-ALLOWED_HOSTS: list[str] = env("ALLOWED_HOSTS")
+ALLOWED_HOSTS = [
+    "testserver",
+    "127.0.0.1",
+    "178.128.188.134",
+    "167.71.124.124",
+    "doestatisjrhaveanerrortoday.com",
+    "www.doestatisjrhaveanerrortoday.com",
+    "uat.doestatisjrhaveanerrortoday.com",
+]
+
 
 
 # Application definition
