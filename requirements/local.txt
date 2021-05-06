@@ -1,0 +1,5 @@
+-r ./base.txt
+
+pytest-django==4.2.0
+pytest-cov==2.11.1
+freezegun==1.1.0

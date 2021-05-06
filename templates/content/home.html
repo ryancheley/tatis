@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+    <section class="text-center">
+        <h1 class="text-lg font-bold" style="color: #2F241D">
+            {% block title %}
+                Does Tatis Jr. Have an Error Today?
+            {% endblock title %}
+        </h1>
+        <h2 class="text-9xl mt-24 filter drop-shadow-2xl" style="color: {{ color }}">
+            {{ error }}
+        </h2>
+    </section>
+
+{% endblock content %}
