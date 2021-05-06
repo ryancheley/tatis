@@ -102,7 +102,11 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+<<<<<<< HEAD
 tatisjr/.env
+=======
+.env
+>>>>>>> d6bbb56414526f565168adf467238f3c06310166
 .venv
 env/
 venv/
@@ -127,6 +131,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
 
 # coverage
 .coverage
@@ -141,3 +146,5 @@ dmypy.json
 
 # static files
 static
+=======
+>>>>>>> d6bbb56414526f565168adf467238f3c06310166
