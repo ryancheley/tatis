@@ -44,8 +44,8 @@ jobs:
     - name: create env file
       run: |
         touch tatisjr/.env
-        echo DEBUG=off >> core/.env
-        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> core/.env
+        echo DEBUG=off >> tatisjr/.env
+        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> tatisjr/.env
     - name: Run migrations
       run: python manage.py migrate
     - name: Run tests
