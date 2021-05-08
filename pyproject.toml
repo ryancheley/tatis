@@ -1,0 +1,9 @@
+[tool.black]
+line-length = 130
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '(venv|migrations|manage.py|asgi.py|wsgi.py)'
+
+[tool.flake8]
+exclude = '.git,*migrations*,*venv*'
+max-line-length = 130
