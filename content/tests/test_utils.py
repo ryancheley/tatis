@@ -1,7 +1,6 @@
 import datetime
 from content.utils import get_game_id, check_for_error, get_total_errors
 from freezegun import freeze_time
-import responses
 
 
 @freeze_time("2021-04-24")
