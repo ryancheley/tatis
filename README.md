@@ -1,4 +1,4 @@
-# tatis
+# Tatis
 
 This is a project I created to troll my friend Barry. He's a huge [Padres](https://www.mlb.com/padres) fan, and I'm a huge [Dodgers](https://www.mlb.com/dodgers) fan.
 
