@@ -1,4 +1,4 @@
-Django==3.2.2
+Django==3.2.3
 requests==2.25.1
 MLB-StatsAPI==1.2
 django-environ==0.4.5
