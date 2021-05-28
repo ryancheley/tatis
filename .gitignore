@@ -60,6 +60,7 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+static/
 
 # Flask stuff:
 instance/
@@ -102,17 +103,14 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-<<<<<<< HEAD
-tatisjr/.env
-=======
-.env
->>>>>>> d6bbb56414526f565168adf467238f3c06310166
+.env*
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
 
 # Spyder project settings
 .spyderproject
@@ -131,20 +129,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-<<<<<<< HEAD
 
-# coverage
-.coverage
+# mutmut
+.mutmut-cache
 
-# environment files
-.env
-.env_prod
-.env_staging
-
-# macOS exclusions
-.idea
-
-# static files
-static
-=======
->>>>>>> d6bbb56414526f565168adf467238f3c06310166
+# macOS stuff
+.idea/
