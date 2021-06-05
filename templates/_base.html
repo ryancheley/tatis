@@ -1,24 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>
-        {% block title %}
-            {{ pages.slug }}
-        {% endblock title %}
-    </title>
-</head>
-<body class="m-5" style='background-position: center top; background-color: #FFC425; background-size: auto; background-repeat: no-repeat; background-image: url("https://www.reuters.com/resizer/3qeauSjf_oRlWkdZokaKbmoobUE=/800x0/cloudfront-us-east-2.images.arcpublishing.com/reuters/UB27MEJSYRPXRFABP5JFLZC7U4.jpg")'>
-{% block content %}
-{% endblock content %}
-<script src="https://unpkg.com/htmx.org@1.1.0"></script>
-<script>
-  document.body.addEventListener('htmx:configRequest', (event) => {
-    event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
-  })
-</script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <title>
+            {% block title %}
+                {{ pages.slug }}
+            {% endblock title %}
+        </title>
+    </head>
+    <body class="m-5" style='background-position: center top; background-color: #FFC425; background-size: auto; background-repeat: no-repeat; background-image: url("https://www.reuters.com/resizer/3qeauSjf_oRlWkdZokaKbmoobUE=/800x0/cloudfront-us-east-2.images.arcpublishing.com/reuters/UB27MEJSYRPXRFABP5JFLZC7U4.jpg")'>
+        {% block content %}
+        {% endblock content %}
+        <script src="https://unpkg.com/htmx.org@1.1.0"></script>
+        <script>
+            document.body.addEventListener('htmx:configRequest', (event) => {
+                event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+            })
+        </script>
+    </body>
 </html>
