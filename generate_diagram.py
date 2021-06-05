@@ -1,6 +1,6 @@
 from diagrams import Diagram, Cluster, Edge
 from diagrams.custom import Custom
-from diagrams.onprem.ci  import GithubActions
+from diagrams.onprem.ci import GithubActions
 from diagrams.onprem.vcs import Github
 from diagrams.onprem.client import Users
 from diagrams.onprem.network import Nginx, Gunicorn
@@ -40,13 +40,5 @@ with Diagram("./custom_resources/Internal Working"):
         workers - django_app
         nginx - workers
         static_assets - nginx
-        users << Edge(color='Orange') << nginx
-        users >> Edge(color='#007500') >> nginx
-
-
-
-
-
-
-
-
+        users << Edge(color="Orange") << nginx
+        users >> Edge(color="#007500") >> nginx
