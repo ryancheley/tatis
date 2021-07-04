@@ -1,10 +1,10 @@
 -r ./base.txt
 
-pytest-django==4.3.0
+pytest-django==4.4.0
 pytest-cov==2.12.1
 freezegun==1.1.0
 black==21.5b0
 flake8==3.9.2
 pyproject-flake8==0.0.1a2
 diagrams==0.20.0
-djhtml==1.4.7
+djhtml==1.4.9
