@@ -1,12 +1,11 @@
 import datetime
-from content.utils import get_game_id, check_for_error, get_total_errors
+from content.utils import get_game_id, check_for_error, get_total_errors, check_home_or_away
 from freezegun import freeze_time
 
 
 @freeze_time("2021-04-24")
 def test_get_game_id():
     today = datetime.datetime.now()
-    print(today)
     game_id = get_game_id(135, today)
     assert game_id == 634361
 
@@ -37,3 +36,17 @@ def test_total_errors():
     total_errors = get_total_errors(665487)
     assert total_errors >= 0
 
+
+def test_check_home_or_away_home():
+    game_location = check_home_or_away(633544, 135)
+    assert game_location == 'home'
+
+
+def test_check_home_or_away_away():
+    game_location = check_home_or_away(634361, 135)
+    assert game_location == 'away'
+
+
+def test_check_home_or_away_none():
+    game_location = check_home_or_away(None, 135)
+    assert game_location is None
