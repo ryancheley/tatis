@@ -3,14 +3,27 @@ import datetime
 import statsapi
 
 
+def check_home_or_away(game_id: int, team_id: int):
+    try:
+        away_team_id = statsapi.boxscore_data(game_id).get('away').get('team').get('id')
+        if away_team_id == team_id:
+            return "away"
+        else:
+            return "home"
+    except:
+        return None
+
+
 def check_for_error(game_id: int, player_last_name: str):
     did_an_error_happen = "No"
     display_color = "#FFC425"
     url = f"https://statsapi.mlb.com/api/v1.1/game/{game_id}/feed/live"
     response = requests.get(url)
     game = response.json()
+    team_location = check_home_or_away(game_id, 135)
+
     try:
-        info = game.get("liveData").get("boxscore").get("teams").get("away").get("info")
+        info = game.get("liveData").get("boxscore").get("teams").get(team_location).get("info")
         for i in info:
             if i.get("title") == "FIELDING":
                 fielding = i.get("fieldList")
