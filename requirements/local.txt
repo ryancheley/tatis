@@ -8,3 +8,4 @@ flake8==3.9.2
 pyproject-flake8==0.0.1a2
 diagrams==0.20.0
 djhtml==1.4.9
+tryceratops==0.5.0

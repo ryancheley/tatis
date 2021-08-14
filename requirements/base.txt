@@ -1,6 +1,6 @@
-Django==3.2.5
-requests==2.25.1
-MLB-StatsAPI==1.2
+Django==3.2.6
+requests==2.26.0
+MLB-StatsAPI==1.3
 django-environ==0.4.5
 gunicorn==20.1.0
-django-permissions-policy==4.1.0
+django-permissions-policy==4.2.0

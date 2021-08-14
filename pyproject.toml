@@ -7,3 +7,6 @@ exclude = '(venv|migrations|manage.py|asgi.py|wsgi.py)'
 [tool.flake8]
 exclude = '.git,*migrations*,*venv*'
 max-line-length = 130
+
+[tool.tryceratops]
+exclude = ["venv", "manage.py"]
