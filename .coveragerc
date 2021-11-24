@@ -6,6 +6,6 @@ omit=
     manage.py
 
 [report]
-fail_under = 99
+fail_under = 95
 show_missing = True
 skip_covered = False
