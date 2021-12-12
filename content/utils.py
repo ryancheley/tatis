@@ -11,7 +11,7 @@ def check_home_or_away(game_id: int, team_id: int):
             return "away"
         else:
             return "home"
-    except IndexError:
+    except requests.exceptions.HTTPError:
         return None
 
 
