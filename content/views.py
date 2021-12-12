@@ -1,6 +1,8 @@
-from django.views.generic import TemplateView
-from .utils import get_game_id, check_for_error
 import datetime
+
+from django.views.generic import TemplateView
+
+from .utils import check_for_error, get_game_id
 
 
 class HomePageTemplateView(TemplateView):

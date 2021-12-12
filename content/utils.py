@@ -1,16 +1,17 @@
-import requests
 import datetime
+
+import requests
 import statsapi
 
 
 def check_home_or_away(game_id: int, team_id: int):
     try:
-        away_team_id = statsapi.boxscore_data(game_id).get('away').get('team').get('id')
+        away_team_id = statsapi.boxscore_data(game_id).get("away").get("team").get("id")
         if away_team_id == team_id:
             return "away"
         else:
             return "home"
-    except:
+    except requests.exceptions.HTTPError:
         return None
 
 
@@ -50,5 +51,8 @@ def get_game_id(team_id: int, game_date: datetime) -> int:
 
 def get_total_errors(player_id):
     fielding_stats = statsapi.player_stat_data(player_id, group="[fielding]", type="[season]")
-    total_errors = fielding_stats.get("stats")[0].get("stats").get("errors")
+    try:
+        total_errors = fielding_stats.get("stats")[0].get("stats").get("errors")
+    except IndexError:
+        total_errors = 0
     return total_errors
