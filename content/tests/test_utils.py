@@ -32,9 +32,7 @@ def test_check_for_padres_game():
     assert error[1] == "#FFC425"
 
 
-@pytest.mark.skip(reason="does not work during off season")
 def test_total_errors():
-    # TODO: dynamically check the total number of errors
     total_errors = get_total_errors(665487)
     assert total_errors == 0
 

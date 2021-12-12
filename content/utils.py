@@ -50,5 +50,8 @@ def get_game_id(team_id: int, game_date: datetime) -> int:
 
 def get_total_errors(player_id):
     fielding_stats = statsapi.player_stat_data(player_id, group="[fielding]", type="[season]")
-    total_errors = fielding_stats.get("stats")[0].get("stats").get("errors")
+    try:
+        total_errors = fielding_stats.get("stats")[0].get("stats").get("errors")
+    except IndexError:
+        total_errors = 0
     return total_errors
