@@ -14,4 +14,3 @@ updates:
       include: "scope"
     labels:
       - "maintenance"
-      
