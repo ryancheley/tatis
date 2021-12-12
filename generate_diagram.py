@@ -1,10 +1,10 @@
-from diagrams import Diagram, Cluster, Edge
+from diagrams import Cluster, Diagram, Edge
 from diagrams.custom import Custom
-from diagrams.onprem.ci import GithubActions
-from diagrams.onprem.vcs import Github
-from diagrams.onprem.client import Users
-from diagrams.onprem.network import Nginx, Gunicorn
 from diagrams.generic.os import Ubuntu
+from diagrams.onprem.ci import GithubActions
+from diagrams.onprem.client import Users
+from diagrams.onprem.network import Gunicorn, Nginx
+from diagrams.onprem.vcs import Github
 from diagrams.programming.framework import Django
 
 with Diagram("./custom_resources/Workflow", direction="TB"):

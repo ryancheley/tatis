@@ -10,7 +10,7 @@ It answers one simple question:
 
 It will return either `Yes` or `No`
 
-And it has a silly image of a throw that Tatis is making. 
+And it has a silly image of a throw that Tatis is making.
 
 If you're a Padre fan you look at it and believe he's making an unbelievable throw to get someone out
 
@@ -22,7 +22,7 @@ I use a MacBook Pro to work on the code. I then deploy it to a Digital Ocean ser
 
 ![Workflow Diagram](custom_resources/workflow.png)
 
-But, you might ask, how is it that when I go to the site, I see anything? I thought I understood it, and when I tried to actually draw it out, turns out I didn't! 
+But, you might ask, how is it that when I go to the site, I see anything? I thought I understood it, and when I tried to actually draw it out, turns out I didn't!
 
 After a bit of Googling, I found [this](https://serverfault.com/a/331263) and it helped me to create this:
 

@@ -1,7 +1,13 @@
 import datetime
-from content.utils import get_game_id, check_for_error, get_total_errors, check_home_or_away
+
 from freezegun import freeze_time
-import pytest
+
+from content.utils import (
+    check_for_error,
+    check_home_or_away,
+    get_game_id,
+    get_total_errors,
+)
 
 
 @freeze_time("2021-04-24")
@@ -39,12 +45,12 @@ def test_total_errors():
 
 def test_check_home_or_away_home():
     game_location = check_home_or_away(633544, 135)
-    assert game_location == 'home'
+    assert game_location == "home"
 
 
 def test_check_home_or_away_away():
     game_location = check_home_or_away(634361, 135)
-    assert game_location == 'away'
+    assert game_location == "away"
 
 
 def test_check_home_or_away_none():

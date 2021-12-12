@@ -30,7 +30,7 @@ style-deploy: style-build
     echo "not configured"
 
 # checks the deployment for prod settings; will return error if the check doesn't pass
-check:
+settings:
     cp tatisjr/.env tatisjr/.env_staging
     cp tatisjr/.env_prod tatisjr/.env
     -python manage.py check --deploy
@@ -40,3 +40,7 @@ check:
 sync branch:
     git switch {{branch}}
     git pull github {{branch}}
+
+# runs the pre-commit check command
+check:
+    pre-commit run --all-files

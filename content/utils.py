@@ -1,16 +1,17 @@
-import requests
 import datetime
+
+import requests
 import statsapi
 
 
 def check_home_or_away(game_id: int, team_id: int):
     try:
-        away_team_id = statsapi.boxscore_data(game_id).get('away').get('team').get('id')
+        away_team_id = statsapi.boxscore_data(game_id).get("away").get("team").get("id")
         if away_team_id == team_id:
             return "away"
         else:
             return "home"
-    except:
+    except IndexError:
         return None
 
 
