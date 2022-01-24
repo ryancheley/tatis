@@ -6,6 +6,6 @@ freezegun==1.1.0
 black==21.12b0
 flake8==4.0.1
 pyproject-flake8==0.0.1a2
-diagrams==0.20.0
+diagrams==0.21.0
 djhtml==1.4.11
 tryceratops==1.0.1
