@@ -163,7 +163,6 @@ PERMISSIONS_POLICY = {
     "fullscreen": [],
     "geolocation": [],
     "gyroscope": [],
-    "interest-cohort": [],
     "magnetometer": [],
     "microphone": [],
     "midi": [],
