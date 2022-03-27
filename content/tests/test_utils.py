@@ -2,6 +2,8 @@ import datetime
 
 from freezegun import freeze_time
 
+import pytest
+
 from content.utils import (
     check_for_error,
     check_home_or_away,
@@ -17,24 +19,43 @@ def test_get_game_id():
     assert game_id == 634361
 
 
-def test_check_for_error_returns_yes_for_tatisjr():
+@pytest.mark.django_db
+def test_check_for_error_returns_yes_for_tatisjr(not_on_injured_list):
     game_id = get_game_id(135, datetime.date(2021, 4, 24))
     error = check_for_error(game_id, "Tatis")
     assert error[0] == "Yes"
     assert error[1] == "#E35625"
 
 
-def test_check_for_error_returns_no_for_tatisjr():
+@pytest.mark.django_db
+def test_check_for_error_returns_no_for_tatisjr_not_on_il(not_on_injured_list):
     game_id = get_game_id(135, datetime.date(2021, 5, 1))
     error = check_for_error(game_id, "Tatis")
-    assert error[0] == "No"
+    assert error[0] == "Not Yet"
     assert error[1] == "#FFC425"
 
 
-def test_check_for_padres_game():
+@pytest.mark.django_db
+def test_check_for_padres_game_not_on_il(not_on_injured_list):
     game_id = get_game_id(135, datetime.date(2021, 5, 6))
     error = check_for_error(game_id, "Tatis")
-    assert error[0] == "No"
+    assert error[0] == "Not Yet"
+    assert error[1] == "#FFC425"
+
+
+@pytest.mark.django_db
+def test_check_for_error_returns_no_for_tatisjr_on_il(on_injured_list):
+    game_id = get_game_id(135, datetime.date(2021, 5, 1))
+    error = check_for_error(game_id, "Tatis")
+    assert error[0] == "Not Yet *"
+    assert error[1] == "#FFC425"
+
+
+@pytest.mark.django_db
+def test_check_for_padres_game_on_il(on_injured_list):
+    game_id = get_game_id(135, datetime.date(2021, 5, 6))
+    error = check_for_error(game_id, "Tatis")
+    assert error[0] == "Not Yet *"
     assert error[1] == "#FFC425"
 
 
