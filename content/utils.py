@@ -3,6 +3,8 @@ import datetime
 import requests
 import statsapi
 
+from .models import InjuredList
+
 
 def check_home_or_away(game_id: int, team_id: int):
     try:
@@ -16,7 +18,11 @@ def check_home_or_away(game_id: int, team_id: int):
 
 
 def check_for_error(game_id: int, player_last_name: str):
-    did_an_error_happen = "No"
+    is_injured = InjuredList.objects.get(pk=1)
+    if is_injured.is_injured:
+        did_an_error_happen = "Not Yet *"
+    else:
+        did_an_error_happen = "Not Yet"
     display_color = "#FFC425"
     url = f"https://statsapi.mlb.com/api/v1.1/game/{game_id}/feed/live"
     response = requests.get(url)
