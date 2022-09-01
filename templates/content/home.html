@@ -11,11 +11,17 @@
         <h2 class="text-9xl mt-24 filter drop-shadow-2xl" style="color: {{ color }}">
             {{ error }}
         </h2>
-        {% if is_injured %}
+        {% if is_injured and not is_suspended %}
         <p class="text-2xl mt-10 pt-24" style="color: {{ color }}">
             * Of course, he can't have an error while he's on the IL.
         </p>
         {% endif %}
+        {% if is_suspended %}
+        <p class="text-2xl mt-10 pt-24" style="color: {{ color }}">
+            * Of course, he can't have an error while he's suspended for using PEDs
+        </p>
+        {% endif %}
+
     </section>
 
 {% endblock content %}
