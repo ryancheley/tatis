@@ -29,3 +29,23 @@ After a bit of Googling, I found [this](https://serverfault.com/a/331263) and it
 ![Internal Working Diagram](custom_resources/internal_working.png)
 
 These diagrams are generated using the amazing llibrary [Diagrams](https://github.com/mingrammer/diagrams). The code used to generate them is [here](generate_diagram.py)
+
+## Development
+
+Development is done locally by creating a feature branch
+
+```
+git switch -c feature_branch_name
+```
+
+Once local development is ready to be moved to Prod you will push the feature branch to github
+
+```commandline
+git push github feature_branch_name
+```
+
+This will push to GitHub and run the GitHub Action `django.yml` which will run tests.
+
+## Deployment
+
+In order to deploy to `prod` you will need to perform a Pull Request to `main` and Merge on GitHub
