@@ -6,7 +6,7 @@ freezegun==1.2.2
 black==22.10.0
 flake8<6.0.0
 pyproject-flake8==5.0.4.post1
-diagrams==0.22.0
+diagrams==0.23.1
 djhtml==1.5.2
 tryceratops==1.1.0
 django-extensions==3.2.1
