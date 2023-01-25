@@ -16,6 +16,7 @@ class SuspendedList(models.Model):
     """
     Is he a cheater?
     """
+
     is_suspended = models.BooleanField(default=True)
 
     def __str__(self):
