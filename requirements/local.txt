@@ -7,6 +7,6 @@ black==23.1.0
 pyproject-flake8==6.0.0.post1
 flake8<7.0.0
 diagrams==0.23.3
-djhtml==2.0.0
+djhtml==3.0.2
 tryceratops==1.1.0
 django-extensions==3.2.1
