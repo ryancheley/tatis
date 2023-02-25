@@ -2,8 +2,8 @@ import datetime
 
 from django.views.generic import TemplateView
 
-from .utils import check_for_error, get_game_id
 from .models import InjuredList, SuspendedList
+from .utils import check_for_error, get_game_id
 
 
 class HomePageTemplateView(TemplateView):

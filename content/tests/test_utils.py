@@ -1,8 +1,7 @@
 import datetime
 
-from freezegun import freeze_time
-
 import pytest
+from freezegun import freeze_time
 
 from content.utils import (
     check_for_error,
