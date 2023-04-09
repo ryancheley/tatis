@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: deploy code
         uses: appleboy/ssh-action@v0.1.2
@@ -22,13 +22,7 @@ jobs:
 
             source /home/tatis/venv/bin/activate
 
-            cd /home/tatis/
-
-            rm -rf /home/tatis/tatisjr
-
-            cp -r /root/tatis/ /home/tatis/tatisjr
-
-            cp /home/tatis/.env /home/tatis/tatisjr/tatisjr/.env
+            cp -r tatis/* tatisjr/
 
             python -m pip install --upgrade pip
 
@@ -36,9 +30,7 @@ jobs:
 
             python /home/tatis/tatisjr/manage.py migrate
 
-            mkdir /home/tatis/tatisjr/static
-
             python /home/tatis/tatisjr/manage.py collectstatic --noinput -v0
 
-            systemctl daemon-reload
-            systemctl restart tatis
+            sudo systemctl daemon-reload
+            sudo systemctl restart tatis
