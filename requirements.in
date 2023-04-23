@@ -15,8 +15,7 @@ gunicorn
 MLB-StatsAPI
 pip-tools
 pre-commit
-psycopg2
-psycopg2-binary
+psycopg[binary]
 pyproject-flake8
 pytest-cov
 pytest-django
