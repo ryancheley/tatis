@@ -125,9 +125,9 @@ pluggy==1.0.0
     # via pytest
 pre-commit==3.2.2
     # via -r requirements.in
-psycopg[binary]==3.1.8
+psycopg[binary]==3.1.9
     # via -r requirements.in
-psycopg-binary==3.1.8
+psycopg-binary==3.1.9
     # via psycopg
 pycodestyle==2.10.0
     # via flake8
