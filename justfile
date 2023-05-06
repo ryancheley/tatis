@@ -37,7 +37,7 @@
 @settings:
     cp tatisjr/.env tatisjr/.env_staging
     cp tatisjr/.env_prod tatisjr/.env
-    -python manage.py check --deploy
+    python manage.py check --deploy
     cp tatisjr/.env_staging tatisjr/.env
 
 # pulls from branch
