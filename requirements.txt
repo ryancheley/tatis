@@ -155,7 +155,7 @@ pytz==2023.3
     # via djangorestframework
 pyyaml==6.0
     # via pre-commit
-requests==2.30.0
+requests==2.31.0
     # via
     #   -r requirements.in
     #   mlb-statsapi
