@@ -14,7 +14,7 @@
 
 # prunes remote branches from github
 @prune:
-    git remote prune github
+    git remote prune origin
 
 # removes all but main and dev local branch
 @gitclean:
@@ -43,7 +43,7 @@
 # pulls from branch
 @sync branch:
     git switch {{branch}}
-    git pull github {{branch}}
+    git pull origin {{branch}}
 
 # runs the pre-commit check command
 @check:

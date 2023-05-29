@@ -43,7 +43,7 @@ git switch -c feature_branch_name
 Once local development is ready to be moved to Prod you will push the feature branch to github
 
 ```commandline
-git push github feature_branch_name
+git push origin feature_branch_name
 ```
 
 This will push to GitHub and run the GitHub Action `django.yml` which will run tests.
