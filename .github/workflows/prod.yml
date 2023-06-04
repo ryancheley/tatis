@@ -16,14 +16,11 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
 
           script: |
-            rm -rf tatis
             git clone git@github.com:ryancheley/tatis.git
 
             source /home/tatis/venv/bin/activate
 
             rsync -av --delete --exclude=.env tatis/* tatisjr
-
-            python -m pip install --upgrade pip
 
             pip -q install -r /home/tatis/tatisjr/requirements.txt
 
@@ -33,3 +30,5 @@ jobs:
 
             sudo systemctl daemon-reload
             sudo systemctl restart tatis
+
+            rm -rf tatis
