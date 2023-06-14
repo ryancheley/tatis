@@ -62,8 +62,6 @@ djangorestframework==3.14.0
     # via -r requirements.in
 djhtml==3.0.6
     # via -r requirements.in
-exceptiongroup==1.1.1
-    # via pytest
 filelock==3.12.0
     # via virtualenv
 flake8==6.0.0
@@ -125,7 +123,7 @@ platformdirs==3.5.1
     #   virtualenv
 pluggy==1.0.0
     # via pytest
-pre-commit==3.3.2
+pre-commit==3.3.3
     # via -r requirements.in
 psycopg[binary]==3.1.9
     # via -r requirements.in
@@ -175,23 +173,12 @@ tokenize-rt==5.0.0
     # via django-upgrade
 toml==0.10.2
     # via tryceratops
-tomli==2.0.1
-    # via
-    #   black
-    #   build
-    #   coverage
-    #   pyproject-flake8
-    #   pyproject-hooks
-    #   pytest
 tryceratops==2.3.2
     # via -r requirements.in
 typed-ast==1.5.4
     # via diagrams
 typing-extensions==4.6.2
-    # via
-    #   asgiref
-    #   psycopg
-    #   tryceratops
+    # via psycopg
 urllib3==2.0.2
     # via requests
 virtualenv==20.23.0
