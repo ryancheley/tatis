@@ -14,7 +14,7 @@ async-timeout==4.0.2
     # via aiohttp
 attrs==23.1.0
     # via aiohttp
-black==23.3.0
+black==23.7.0
     # via -r requirements.in
 build==0.10.0
     # via pip-tools
