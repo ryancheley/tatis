@@ -50,4 +50,4 @@ jobs:
     - name: Run tests
       uses: sjvrijn/pytest-last-failed@v2
       with:
-        pytest-args: '--my --pytest --arguments'
+        pytest-args: '--last-failed'
