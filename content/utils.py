@@ -18,7 +18,7 @@ def check_home_or_away(game_id: int, team_id: int):
 
 
 def check_for_error(game_id: int, player_last_name: str):
-    is_injured = InjuredList.objects.get(pk=1)
+    is_injured = InjuredList.objects.last()
     if is_injured.is_injured:
         did_an_error_happen = "Not Yet *"
     else:

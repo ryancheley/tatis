@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-aiohttp==3.8.4
+aiohttp==3.8.5
     # via slackclient
 aiosignal==1.3.1
     # via aiohttp
@@ -18,15 +18,15 @@ black==23.7.0
     # via -r requirements.in
 build==0.10.0
     # via pip-tools
-certifi==2023.5.7
+certifi==2023.7.22
     # via requests
 cfgv==3.3.1
     # via pre-commit
-charset-normalizer==3.1.0
+charset-normalizer==3.2.0
     # via
     #   aiohttp
     #   requests
-click==8.1.3
+click==8.1.6
     # via
     #   black
     #   pip-tools
@@ -35,7 +35,7 @@ coverage[toml]==7.2.7
     # via pytest-cov
 diagrams==0.23.3
     # via -r requirements.in
-distlib==0.3.6
+distlib==0.3.7
     # via virtualenv
 django==4.2.3
     # via
@@ -62,6 +62,8 @@ djangorestframework==3.14.0
     # via -r requirements.in
 djhtml==3.0.6
     # via -r requirements.in
+exceptiongroup==1.1.2
+    # via pytest
 filelock==3.12.2
     # via virtualenv
 flake8==6.0.0
@@ -70,15 +72,15 @@ flake8==6.0.0
     #   pyproject-flake8
 freezegun==1.2.2
     # via -r requirements.in
-frozenlist==1.3.3
+frozenlist==1.4.0
     # via
     #   aiohttp
     #   aiosignal
 graphviz==0.20.1
     # via diagrams
-gunicorn==20.1.0
+gunicorn==21.2.0
     # via -r requirements.in
-identify==2.5.24
+identify==2.5.26
     # via pre-commit
 idna==3.4
     # via
@@ -110,14 +112,15 @@ packaging==23.1
     # via
     #   black
     #   build
+    #   gunicorn
     #   pytest
-pathspec==0.11.1
+pathspec==0.11.2
     # via black
 pillow==10.0.0
     # via django-colorfield
-pip-tools==6.14.0
+pip-tools==7.1.0
     # via -r requirements.in
-platformdirs==3.8.0
+platformdirs==3.10.0
     # via
     #   black
     #   virtualenv
@@ -153,13 +156,13 @@ python-slugify==8.0.1
     # via django-admin-interface
 pytz==2023.3
     # via djangorestframework
-pyyaml==6.0
+pyyaml==6.0.1
     # via pre-commit
 requests==2.31.0
     # via
     #   -r requirements.in
     #   mlb-statsapi
-rich==13.4.2
+rich==13.5.0
     # via tryceratops
 six==1.16.0
     # via python-dateutil
@@ -173,17 +176,29 @@ tokenize-rt==5.1.0
     # via django-upgrade
 toml==0.10.2
     # via tryceratops
+tomli==2.0.1
+    # via
+    #   black
+    #   build
+    #   coverage
+    #   pip-tools
+    #   pyproject-flake8
+    #   pyproject-hooks
+    #   pytest
 tryceratops==2.3.2
     # via -r requirements.in
 typed-ast==1.5.5
     # via diagrams
 typing-extensions==4.7.1
-    # via psycopg
-urllib3==2.0.3
+    # via
+    #   asgiref
+    #   psycopg
+    #   tryceratops
+urllib3==2.0.4
     # via requests
-virtualenv==20.23.1
+virtualenv==20.24.2
     # via pre-commit
-wheel==0.40.0
+wheel==0.41.0
     # via pip-tools
 yarl==1.9.2
     # via aiohttp
