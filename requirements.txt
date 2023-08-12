@@ -116,7 +116,7 @@ pathspec==0.11.2
     # via black
 pillow==10.0.0
     # via django-colorfield
-pip-tools==7.1.0
+pip-tools==7.3.0
     # via -r requirements.in
 platformdirs==3.10.0
     # via
@@ -126,9 +126,9 @@ pluggy==1.2.0
     # via pytest
 pre-commit==3.3.3
     # via -r requirements.in
-psycopg[binary]==3.1.9
+psycopg[binary]==3.1.10
     # via -r requirements.in
-psycopg-binary==3.1.9
+psycopg-binary==3.1.10
     # via psycopg
 pycodestyle==2.10.0
     # via flake8
