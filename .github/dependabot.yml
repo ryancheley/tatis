@@ -9,6 +9,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    groups:
+        python-packages:
+          patterns:
+            - "*"    
     commit-message:
       prefix: "pip prod"
       include: "scope"
