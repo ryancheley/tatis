@@ -37,7 +37,7 @@ diagrams==0.23.3
     # via -r requirements.in
 distlib==0.3.7
     # via virtualenv
-django==4.2.5
+django==4.2.6
     # via
     #   -r requirements.in
     #   django-csp
