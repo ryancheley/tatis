@@ -41,7 +41,7 @@ diagrams==0.23.4
     # via -r requirements.in
 distlib==0.3.7
     # via virtualenv
-django==5.0.1
+django==5.0.2
     # via
     #   -r requirements.in
     #   django-csp
@@ -133,9 +133,7 @@ pluggy==1.2.0
 pre-commit==3.6.0
     # via -r requirements.in
 psycopg[binary]==3.1.18
-    # via
-    #   -r requirements.in
-    #   psycopg
+    # via -r requirements.in
 psycopg-binary==3.1.18
     # via psycopg
 pycodestyle==2.11.0
