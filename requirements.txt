@@ -52,7 +52,7 @@ django-admin-interface==0.28.5
     # via -r requirements.in
 django-colorfield==0.9.0
     # via django-admin-interface
-django-csp==3.7
+django-csp==3.8
     # via -r requirements.in
 django-environ==0.11.2
     # via -r requirements.in
