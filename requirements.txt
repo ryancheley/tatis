@@ -16,7 +16,7 @@ async-timeout==4.0.2
     # via aiohttp
 attrs==23.1.0
     # via aiohttp
-black==24.2.0
+black==24.3.0
     # via -r requirements.in
 build==1.0.3
     # via pip-tools
@@ -34,9 +34,7 @@ click==8.1.6
     #   pip-tools
     #   tryceratops
 coverage[toml]==7.2.7
-    # via
-    #   coverage
-    #   pytest-cov
+    # via pytest-cov
 diagrams==0.23.4
     # via -r requirements.in
 distlib==0.3.7
@@ -62,7 +60,7 @@ django-permissions-policy==4.19.0
     # via -r requirements.in
 django-upgrade==1.16.0
     # via -r requirements.in
-djangorestframework==3.14.0
+djangorestframework==3.15.0
     # via -r requirements.in
 djhtml==3.0.6
     # via -r requirements.in
@@ -160,8 +158,6 @@ python-dateutil==2.8.2
     # via freezegun
 python-slugify==8.0.1
     # via django-admin-interface
-pytz==2023.3
-    # via djangorestframework
 pyyaml==6.0.1
     # via pre-commit
 requests==2.31.0
