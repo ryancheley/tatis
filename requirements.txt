@@ -80,7 +80,7 @@ frozenlist==1.4.0
     #   aiosignal
 graphviz==0.20.1
     # via diagrams
-gunicorn==21.2.0
+gunicorn==22.0.0
     # via -r requirements.in
 identify==2.5.26
     # via pre-commit
