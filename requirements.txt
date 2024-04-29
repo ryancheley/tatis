@@ -100,7 +100,7 @@ mccabe==0.7.0
     # via flake8
 mdurl==0.1.2
     # via markdown-it-py
-mlb-statsapi==1.7.1
+mlb-statsapi==1.7.2
     # via -r requirements.in
 multidict==6.0.4
     # via
