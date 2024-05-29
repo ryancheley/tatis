@@ -58,7 +58,7 @@ django-extensions==3.2.3
     # via -r requirements.in
 django-permissions-policy==4.19.0
     # via -r requirements.in
-django-upgrade==1.17.0
+django-upgrade==1.18.0
     # via -r requirements.in
 djangorestframework==3.15.1
     # via -r requirements.in
@@ -160,7 +160,7 @@ python-slugify==8.0.1
     # via django-admin-interface
 pyyaml==6.0.1
     # via pre-commit
-requests==2.32.2
+requests==2.32.3
     # via
     #   -r requirements.in
     #   mlb-statsapi
