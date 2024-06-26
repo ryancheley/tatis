@@ -46,7 +46,7 @@ django==5.0.6
     #   django-extensions
     #   django-permissions-policy
     #   djangorestframework
-django-admin-interface==0.28.7
+django-admin-interface==0.28.8
     # via -r requirements.in
 django-colorfield==0.9.0
     # via django-admin-interface
