@@ -16,7 +16,7 @@ async-timeout==4.0.2
     # via aiohttp
 attrs==23.1.0
     # via aiohttp
-black==24.8.0
+black==24.10.0
     # via -r requirements.in
 build==1.0.3
     # via pip-tools
@@ -128,7 +128,7 @@ platformdirs==3.10.0
     #   virtualenv
 pluggy==1.2.0
     # via pytest
-pre-commit==3.8.0
+pre-commit==4.0.0
     # via -r requirements.in
 psycopg[binary]==3.2.3
     # via -r requirements.in
