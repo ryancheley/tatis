@@ -56,7 +56,7 @@ django-environ==0.11.2
     # via -r requirements.in
 django-extensions==3.2.3
     # via -r requirements.in
-django-permissions-policy==4.22.0
+django-permissions-policy==4.23.0
     # via -r requirements.in
 django-upgrade==1.22.1
     # via -r requirements.in
