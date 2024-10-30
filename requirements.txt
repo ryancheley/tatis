@@ -33,7 +33,7 @@ click==8.1.6
     #   black
     #   pip-tools
     #   tryceratops
-coverage[toml]==7.2.7
+coverage[toml]==7.6.4
     # via pytest-cov
 diagrams==0.23.4
     # via -r requirements.in
@@ -150,7 +150,7 @@ pytest==7.4.0
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==5.0.0
+pytest-cov==6.0.0
     # via -r requirements.in
 pytest-django==4.9.0
     # via -r requirements.in
@@ -186,7 +186,7 @@ tomli==2.0.1
     #   pyproject-hooks
     #   pytest
     #   tryceratops
-tryceratops==2.4.0
+tryceratops==2.4.1
     # via -r requirements.in
 typed-ast==1.5.5
     # via diagrams
