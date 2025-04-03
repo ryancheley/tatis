@@ -46,7 +46,7 @@ django==5.1.8
     #   django-extensions
     #   django-permissions-policy
     #   djangorestframework
-django-admin-interface==0.29.4
+django-admin-interface==0.30.0
     # via -r requirements.in
 django-colorfield==0.9.0
     # via django-admin-interface
@@ -154,7 +154,7 @@ pytest==7.4.0
     #   pytest-django
 pytest-cov==6.1.0
     # via -r requirements.in
-pytest-django==4.11.0
+pytest-django==4.11.1
     # via -r requirements.in
 python-dateutil==2.8.2
     # via freezegun
