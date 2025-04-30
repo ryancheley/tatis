@@ -56,7 +56,7 @@ django-environ==0.12.0
     # via -r requirements.in
 django-extensions==4.1
     # via -r requirements.in
-django-permissions-policy==4.25.0
+django-permissions-policy==4.26.0
     # via -r requirements.in
 django-upgrade==1.24.0
     # via -r requirements.in
@@ -132,9 +132,9 @@ pre-commit==4.2.0
     # via
     #   -r requirements.in
     #   diagrams
-psycopg[binary]==3.2.6
+psycopg[binary]==3.2.7
     # via -r requirements.in
-psycopg-binary==3.2.6
+psycopg-binary==3.2.7
     # via psycopg
 pycodestyle==2.11.0
     # via flake8
