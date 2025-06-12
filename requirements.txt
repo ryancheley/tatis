@@ -127,7 +127,9 @@ platformdirs==3.10.0
     #   black
     #   virtualenv
 pluggy==1.2.0
-    # via pytest
+    # via
+    #   pytest
+    #   pytest-cov
 pre-commit==4.2.0
     # via
     #   -r requirements.in
@@ -152,7 +154,7 @@ pytest==7.4.0
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==6.1.1
+pytest-cov==6.2.1
     # via -r requirements.in
 pytest-django==4.11.1
     # via -r requirements.in
