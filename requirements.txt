@@ -46,11 +46,11 @@ django==5.2.3
     #   django-extensions
     #   django-permissions-policy
     #   djangorestframework
-django-admin-interface==0.30.0
+django-admin-interface==0.30.1
     # via -r requirements.in
 django-colorfield==0.9.0
     # via django-admin-interface
-django-csp==3.8
+django-csp==4.0
     # via -r requirements.in
 django-environ==0.12.0
     # via -r requirements.in
@@ -114,6 +114,7 @@ packaging==23.1
     # via
     #   black
     #   build
+    #   django-csp
     #   gunicorn
     #   pytest
 pathspec==0.11.2
