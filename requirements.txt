@@ -165,7 +165,7 @@ python-slugify==8.0.1
     # via django-admin-interface
 pyyaml==6.0.1
     # via pre-commit
-requests==2.32.4
+requests==2.32.5
     # via
     #   -r requirements.in
     #   mlb-statsapi
