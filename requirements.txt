@@ -135,9 +135,9 @@ pre-commit==4.3.0
     # via
     #   -r requirements.in
     #   diagrams
-psycopg[binary]==3.2.9
+psycopg[binary]==3.2.10
     # via -r requirements.in
-psycopg-binary==3.2.9
+psycopg-binary==3.2.10
     # via psycopg
 pycodestyle==2.11.0
     # via flake8
@@ -155,7 +155,7 @@ pytest==7.4.0
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==6.2.1
+pytest-cov==6.3.0
     # via -r requirements.in
 pytest-django==4.11.1
     # via -r requirements.in
