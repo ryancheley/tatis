@@ -16,7 +16,7 @@ async-timeout==4.0.2
     # via aiohttp
 attrs==23.1.0
     # via aiohttp
-black==25.1.0
+black==25.9.0
     # via -r requirements.in
 build==1.0.3
     # via pip-tools
@@ -163,6 +163,8 @@ python-dateutil==2.8.2
     # via freezegun
 python-slugify==8.0.1
     # via django-admin-interface
+pytokens==0.1.10
+    # via black
 pyyaml==6.0.1
     # via pre-commit
 requests==2.32.5
