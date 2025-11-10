@@ -16,7 +16,7 @@ async-timeout==4.0.2
     # via aiohttp
 attrs==23.1.0
     # via aiohttp
-black==25.9.0
+black==25.11.0
     # via -r requirements.in
 build==1.0.3
     # via pip-tools
@@ -46,7 +46,7 @@ django==5.2.8
     #   django-extensions
     #   django-permissions-policy
     #   djangorestframework
-django-admin-interface==0.30.1
+django-admin-interface==0.31.0
     # via -r requirements.in
 django-colorfield==0.9.0
     # via django-admin-interface
@@ -131,7 +131,7 @@ pluggy==1.2.0
     # via
     #   pytest
     #   pytest-cov
-pre-commit==4.3.0
+pre-commit==4.4.0
     # via
     #   -r requirements.in
     #   diagrams
@@ -163,7 +163,7 @@ python-dateutil==2.8.2
     # via freezegun
 python-slugify==8.0.1
     # via django-admin-interface
-pytokens==0.1.10
+pytokens==0.3.0
     # via black
 pyyaml==6.0.1
     # via pre-commit
