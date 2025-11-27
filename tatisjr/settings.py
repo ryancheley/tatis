@@ -13,6 +13,7 @@ env = environ.Env(
     SECURE_SSL_REDIRECT=(bool, False),
     SESSION_COOKIE_SECURE=(bool, False),
     CSRF_COOKIE_SECURE=(bool, False),
+    SECURE_PROXY_SSL_HEADER=(str, None),
 )
 
 environ.Env.read_env()
@@ -145,6 +146,11 @@ CSRF_COOKIE_SECURE = env("CSRF_COOKIE_SECURE")
 SECURE_HSTS_PRELOAD = env("SECURE_HSTS_PRELOAD")
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# Trust proxy headers from Coolify/Caddy
+if secure_proxy := env("SECURE_PROXY_SSL_HEADER", default=None):
+    header, value = secure_proxy.split(",")
+    SECURE_PROXY_SSL_HEADER = (header, value)
 
 PERMISSIONS_POLICY = {
     "accelerometer": [],
