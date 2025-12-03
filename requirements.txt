@@ -135,9 +135,9 @@ pre-commit==4.5.0
     # via
     #   -r requirements.in
     #   diagrams
-psycopg[binary]==3.3.0
+psycopg[binary]==3.3.1
     # via -r requirements.in
-psycopg-binary==3.3.0
+psycopg-binary==3.3.1
     # via psycopg
 pycodestyle==2.11.0
     # via flake8
