@@ -32,10 +32,13 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = env("DEBUG")
 
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[
-    "testserver",
-    "127.0.0.1",
-])
+ALLOWED_HOSTS = env.list(
+    "ALLOWED_HOSTS",
+    default=[
+        "testserver",
+        "127.0.0.1",
+    ],
+)
 
 
 # Application definition
@@ -51,7 +54,6 @@ INSTALLED_APPS = [
     "django_extensions",
     "health_check",
     "health_check.db",
-    
     # local
     "content",
 ]

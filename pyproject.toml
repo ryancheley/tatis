@@ -1,12 +1,66 @@
-[tool.black]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tatis"
+version = "1.0.0"
+description = "Does Fernando Tatis Jr have an error today?"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "Django",
+    "django-csp",
+    "django-environ",
+    "django-extensions",
+    "django-health-check",
+    "django-permissions-policy",
+    "django-upgrade",
+    "djangorestframework",
+    "djhtml",
+    "freezegun",
+    "gunicorn",
+    "MLB-StatsAPI",
+    "pre-commit",
+    "psycopg[binary]",
+    "pytest-cov",
+    "pytest-django",
+    "requests",
+    "ruff",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["content", "tatisjr"]
+
+[tool.ruff]
 line-length = 130
-target-version = ['py38']
-include = '\.pyi?$'
-exclude = '(venv|migrations|manage.py|asgi.py|wsgi.py)'
+target-version = "py313"
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "migrations",
+    "manage.py",
+    "asgi.py",
+    "wsgi.py",
+]
 
-[tool.flake8]
-exclude = '.git,*migrations*,*venv*'
-max-line-length = 130
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # pyflakes
+    "I",      # isort
+    "C90",    # mccabe complexity
+    "UP",     # pyupgrade
+    "TRY",    # tryceratops
+]
+ignore = []
 
-[tool.tryceratops]
-exclude = ["venv", "manage.py"]
+[tool.ruff.lint.isort]
+known-first-party = ["content", "tatisjr"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tatisjr.settings"
+python_files = ["test_*.py"]
+addopts = "--reuse-db"
