@@ -11,7 +11,7 @@ class HomePageTemplateView(TemplateView):
     http_method_names = ["get", "post"]
 
     def get_context_data(self, *args, **kwargs):
-        context = super(HomePageTemplateView, self).get_context_data()
+        context = super().get_context_data()
         today = datetime.date.today()
         game_id = get_game_id(135, today)
         is_injured = InjuredList.objects.get_or_create(pk=1)[0]
