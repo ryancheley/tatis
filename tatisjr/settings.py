@@ -94,7 +94,13 @@ WSGI_APPLICATION = "tatisjr.wsgi.application"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db(),
+    "default": env.db()
+    | {
+        "CONN_MAX_AGE": 0,
+        "OPTIONS": {
+            "pool": True,
+        },
+    },
 }
 
 # Password validation
