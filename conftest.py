@@ -1,31 +1,38 @@
 import pytest
-
-from content.models import InjuredList, SuspendedList
+from constance import config
 
 
 @pytest.fixture
 def not_on_injured_list():
-    InjuredList.objects.get_or_create(is_injured=False)
-    is_injured = InjuredList.objects.all()[0]
-    return is_injured
+    """Set IS_INJURED config to False for testing."""
+    original_value = config.IS_INJURED
+    config.IS_INJURED = False
+    yield config
+    config.IS_INJURED = original_value
 
 
 @pytest.fixture
 def on_injured_list():
-    InjuredList.objects.get_or_create(is_injured=True)
-    is_injured = InjuredList.objects.all()[0]
-    return is_injured
+    """Set IS_INJURED config to True for testing."""
+    original_value = config.IS_INJURED
+    config.IS_INJURED = True
+    yield config
+    config.IS_INJURED = original_value
 
 
 @pytest.fixture
 def not_suspended():
-    SuspendedList.objects.get_or_create(is_suspended=False)
-    is_suspended = SuspendedList.objects.all()[0]
-    return is_suspended
+    """Set IS_SUSPENDED config to False for testing."""
+    original_value = config.IS_SUSPENDED
+    config.IS_SUSPENDED = False
+    yield config
+    config.IS_SUSPENDED = original_value
 
 
 @pytest.fixture
 def suspended():
-    SuspendedList.objects.get_or_create(is_suspended=True)
-    is_suspended = SuspendedList.objects.all()[0]
-    return is_suspended
+    """Set IS_SUSPENDED config to True for testing."""
+    original_value = config.IS_SUSPENDED
+    config.IS_SUSPENDED = True
+    yield config
+    config.IS_SUSPENDED = original_value

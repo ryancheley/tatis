@@ -9,6 +9,7 @@ description = "Does Fernando Tatis Jr have an error today?"
 requires-python = ">=3.13"
 dependencies = [
     "Django",
+    "django-constance[database]",
     "django-csp",
     "django-environ",
     "django-extensions",
