@@ -20,42 +20,52 @@ def test_get_game_id():
 
 @pytest.mark.django_db
 def test_check_for_error_returns_yes_for_tatisjr(not_on_injured_list):
+    from constance import config
+
     game_id = get_game_id(135, datetime.date(2021, 4, 24))
     error = check_for_error(game_id, "Tatis")
-    assert error[0] == "Yes"
-    assert error[1] == "#E35625"
+    assert error[0] == config.MESSAGE_ERROR
+    assert error[1] == config.COLOR_ERROR
 
 
 @pytest.mark.django_db
 def test_check_for_error_returns_no_for_tatisjr_not_on_il(not_on_injured_list):
+    from constance import config
+
     game_id = get_game_id(135, datetime.date(2021, 5, 1))
     error = check_for_error(game_id, "Tatis")
-    assert error[0] == "Not Yet"
-    assert error[1] == "#FFC425"
+    assert error[0] == config.MESSAGE_NO_ERROR
+    assert error[1] == config.COLOR_NO_ERROR
 
 
 @pytest.mark.django_db
 def test_check_for_padres_game_not_on_il(not_on_injured_list):
+    from constance import config
+
     game_id = get_game_id(135, datetime.date(2021, 5, 6))
     error = check_for_error(game_id, "Tatis")
-    assert error[0] == "Not Yet"
-    assert error[1] == "#FFC425"
+    assert error[0] == config.MESSAGE_NO_ERROR
+    assert error[1] == config.COLOR_NO_ERROR
 
 
 @pytest.mark.django_db
 def test_check_for_error_returns_no_for_tatisjr_on_il(on_injured_list):
+    from constance import config
+
     game_id = get_game_id(135, datetime.date(2021, 5, 1))
     error = check_for_error(game_id, "Tatis")
-    assert error[0] == "Not Yet *"
-    assert error[1] == "#FFC425"
+    assert error[0] == config.MESSAGE_NO_ERROR_INJURED
+    assert error[1] == config.COLOR_NO_ERROR
 
 
 @pytest.mark.django_db
 def test_check_for_padres_game_on_il(on_injured_list):
+    from constance import config
+
     game_id = get_game_id(135, datetime.date(2021, 5, 6))
     error = check_for_error(game_id, "Tatis")
-    assert error[0] == "Not Yet *"
-    assert error[1] == "#FFC425"
+    assert error[0] == config.MESSAGE_NO_ERROR_INJURED
+    assert error[1] == config.COLOR_NO_ERROR
 
 
 @freeze_time("2022-12-31")
