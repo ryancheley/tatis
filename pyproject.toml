@@ -20,7 +20,7 @@ dependencies = [
     "freezegun",
     "gunicorn",
     "MLB-StatsAPI",
-    "pre-commit",
+    "prek",
     "psycopg[binary,pool]>=3.2.9",
     "pytest-cov",
     "pytest-django",
