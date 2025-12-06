@@ -2,8 +2,7 @@ import datetime
 
 import requests
 import statsapi
-
-from .models import InjuredList
+from constance import config
 
 
 def check_home_or_away(game_id: int, team_id: int):
@@ -18,16 +17,15 @@ def check_home_or_away(game_id: int, team_id: int):
 
 
 def check_for_error(game_id: int, player_last_name: str):
-    is_injured = InjuredList.objects.last()
-    if is_injured.is_injured:
-        did_an_error_happen = "Not Yet *"
+    if config.IS_INJURED:
+        did_an_error_happen = config.MESSAGE_NO_ERROR_INJURED
     else:
-        did_an_error_happen = "Not Yet"
-    display_color = "#FFC425"
+        did_an_error_happen = config.MESSAGE_NO_ERROR
+    display_color = config.COLOR_NO_ERROR
     url = f"https://statsapi.mlb.com/api/v1.1/game/{game_id}/feed/live"
     response = requests.get(url)
     game = response.json()
-    team_location = check_home_or_away(game_id, 135)
+    team_location = check_home_or_away(game_id, config.PLAYER_TEAM_ID)
 
     try:
         info = game.get("liveData").get("boxscore").get("teams").get(team_location).get("info")
@@ -39,8 +37,8 @@ def check_for_error(game_id: int, player_last_name: str):
                         errors = item.get("value").split("; ")
                         for error in errors:
                             if player_last_name in error:
-                                did_an_error_happen = "Yes"
-                                display_color = "#E35625"
+                                did_an_error_happen = config.MESSAGE_ERROR
+                                display_color = config.COLOR_ERROR
     except AttributeError:
         pass
     return did_an_error_happen, display_color

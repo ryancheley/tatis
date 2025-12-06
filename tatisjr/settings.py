@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # third party
+    "constance",
+    "constance.backends.database",
     "django_extensions",
     "health_check",
     "health_check.db",
@@ -198,5 +200,35 @@ LOGGING = {
             "handlers": ["null"],
             "propagate": False,
         },
+    },
+}
+
+# Django Constance Configuration
+CONSTANCE_BACKEND = "constance.backends.database.DatabaseBackend"
+
+CONSTANCE_CONFIG = {
+    "PLAYER_TEAM_ID": (135, "MLB Team ID for the player being tracked (135 = San Diego Padres)", int),
+    "PLAYER_LAST_NAME": ("Tatis Jr", "Last name of the player being tracked", str),
+    "COLOR_NO_ERROR": ("#FFC425", "Background color when player has no errors (hex color code)", str),
+    "COLOR_ERROR": ("#E35625", "Background color when player has an error (hex color code)", str),
+    "MESSAGE_ERROR": ("Yes", "Message displayed when player has an error", str),
+    "MESSAGE_NO_ERROR": ("Not Yet", "Message displayed when player has no errors", str),
+    "MESSAGE_NO_ERROR_INJURED": ("Not Yet *", "Message displayed when player has no errors and is injured", str),
+    "IS_INJURED": (False, "Whether the player is currently on the injured list", bool),
+    "IS_SUSPENDED": (False, "Whether the player is currently suspended", bool),
+}
+
+CONSTANCE_CONFIG_FIELDSETS = {
+    "Player Settings": {
+        "fields": ("PLAYER_TEAM_ID", "PLAYER_LAST_NAME", "IS_INJURED", "IS_SUSPENDED"),
+        "collapse": False,
+    },
+    "Display Settings": {
+        "fields": ("COLOR_NO_ERROR", "COLOR_ERROR"),
+        "collapse": False,
+    },
+    "Message Settings": {
+        "fields": ("MESSAGE_ERROR", "MESSAGE_NO_ERROR", "MESSAGE_NO_ERROR_INJURED"),
+        "collapse": False,
     },
 }
