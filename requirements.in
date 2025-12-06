@@ -5,6 +5,7 @@ django-admin-interface
 django-csp
 django-environ
 django-extensions
+django-health-check
 django-permissions-policy
 django-upgrade
 djangorestframework

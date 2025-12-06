@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # third party
     "django_extensions",
+    "health_check",
+    "health_check.db",
+    
     # local
     "content",
 ]
