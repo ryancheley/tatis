@@ -1,7 +1,5 @@
 black
-diagrams
 Django
-django-admin-interface
 django-csp
 django-environ
 django-extensions
@@ -14,12 +12,10 @@ flake8
 freezegun
 gunicorn
 MLB-StatsAPI
-pip-tools
 pre-commit
 psycopg[binary]
 pyproject-flake8
 pytest-cov
 pytest-django
 requests
-slackclient
 tryceratops
