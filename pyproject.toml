@@ -27,6 +27,7 @@ dependencies = [
     "pytest-django",
     "requests",
     "ruff",
+    "whitenoise",
 ]
 
 [tool.hatch.build.targets.wheel]
