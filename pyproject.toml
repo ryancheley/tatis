@@ -6,7 +6,6 @@ build-backend = "hatchling.build"
 name = "tatis"
 version = "1.0.0"
 description = "Does Fernando Tatis Jr have an error today?"
-readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "Django",
