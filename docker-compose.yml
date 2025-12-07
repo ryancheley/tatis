@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: tatis_web
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn --bind 0.0.0.0:8000 --workers 2 --timeout 60 --reload tatisjr.wsgi:application
     volumes:
       - .:/app
       - static_volume:/app/staticfiles
