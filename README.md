@@ -29,6 +29,8 @@ The easiest way to get started is using Docker Compose:
    ```bash
    cp .env.example .env
    ```
+   Note: The `.env.example` file is configured for docker-compose with `DATABASE_URL` pointing to the `db` service. If you're running the app without Docker, change the host from `db` to `localhost` in your `.env` file.
+
 3. Start the services:
    ```bash
    docker-compose up
@@ -40,6 +42,7 @@ The Docker setup includes:
 - PostgreSQL 16 database
 - Automatic database migrations on startup
 - Volume mounts for persistent data
+- Environment variables loaded from `.env` file
 
 To stop the services:
 ```bash
@@ -77,11 +80,14 @@ If you prefer not to use Docker:
 This application is ready for deployment to Coolify:
 
 1. In Coolify, create a new application from this Git repository
-2. Set the following environment variables:
-   - `DATABASE_URL`: PostgreSQL connection string
+2. Coolify will automatically detect and use the Dockerfile
+3. In Coolify's environment variables section, configure the following:
+   - `DATABASE_URL`: Your production PostgreSQL connection string (Coolify can provision this)
+     - Example: `postgres://user:password@your-db-host:5432/tatis_prod`
+     - If using Coolify's managed PostgreSQL, it will inject this automatically
    - `SECRET_KEY`: Django secret key (generate a secure one)
    - `DEBUG=False`
-   - `ALLOWED_HOSTS`: Your domain name(s)
+   - `ALLOWED_HOSTS`: Your domain name(s) (e.g., `yourdomain.com,www.yourdomain.com`)
    - `SECURE_SSL_REDIRECT=True`
    - `SESSION_COOKIE_SECURE=True`
    - `CSRF_COOKIE_SECURE=True`
@@ -89,13 +95,19 @@ This application is ready for deployment to Coolify:
    - `SECURE_HSTS_INCLUDE_SUBDOMAINS=True`
    - `SECURE_HSTS_PRELOAD=True`
    - `SECURE_PROXY_SSL_HEADER=HTTP_X_FORWARDED_PROTO,https`
-3. Coolify will automatically build and deploy using the Dockerfile
+
+**Important**: Coolify injects environment variables directly into the container at runtime. Do NOT create a `.env` file in production - Coolify handles all environment configuration through its web interface. The `.env.example` file is only for local development reference.
 
 The application includes:
 - Health check endpoint at `/health/` for Coolify monitoring
 - Automatic database migrations on container startup
 - Static file collection during build
 - Gunicorn as the production WSGI server
+
+#### Database Connection
+- Coolify can provision a PostgreSQL database and automatically inject the `DATABASE_URL`
+- Or you can connect to an external database by setting `DATABASE_URL` manually
+- The app uses django-environ to read the database connection from `DATABASE_URL`
 
 ## Development Commands
 
