@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "constance",
     "constance.backends.database",
     "django_extensions",
+    "django_model_info.apps.DjangoModelInfoConfig",
     "health_check",
     "health_check.db",
     # local
