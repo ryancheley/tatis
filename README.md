@@ -38,7 +38,7 @@ The easiest way to get started is using Docker Compose:
 4. The application will be available at http://localhost:8000
 
 The Docker setup includes:
-- Gunicorn production server with live code reloading (--reload flag)
+- Django development server with live code reloading
 - PostgreSQL 16 database
 - Automatic database migrations on startup
 - Volume mounts for persistent data
