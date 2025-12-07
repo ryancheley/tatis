@@ -14,6 +14,7 @@ dependencies = [
     "django-environ",
     "django-extensions",
     "django-health-check",
+    "django-model-info",
     "django-permissions-policy",
     "django-upgrade",
     "djangorestframework",
