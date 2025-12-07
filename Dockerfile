@@ -1,5 +1,5 @@
 # Build stage - Install dependencies
-FROM python:3.13-slim AS builder
+FROM python:3.14-slim AS builder
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -26,7 +26,7 @@ COPY pyproject.toml ./
 RUN uv pip install --system .
 
 # Runtime stage
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -48,7 +48,7 @@ RUN useradd -m -u 1000 django && \
 WORKDIR /app
 
 # Copy Python packages from builder
-COPY --from=builder /usr/local/lib/python3.13/site-packages /usr/local/lib/python3.13/site-packages
+COPY --from=builder /usr/local/lib/python3.14/site-packages /usr/local/lib/python3.14/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
 # Copy project files

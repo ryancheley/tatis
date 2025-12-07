@@ -58,7 +58,7 @@ docker-compose up --build
 
 If you prefer not to use Docker:
 
-1. Install Python 3.13+
+1. Install Python 3.14+
 2. Install dependencies:
    ```bash
    uv pip install -e .
