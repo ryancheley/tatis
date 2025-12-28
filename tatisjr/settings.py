@@ -100,7 +100,8 @@ WSGI_APPLICATION = "tatisjr.wsgi.application"
 DATABASES = {
     "default": env.db()
     | {
-        "CONN_MAX_AGE": 0,
+        "CONN_MAX_AGE": 600,
+        "CONN_HEALTH_CHECKS": True,
         "OPTIONS": {
             "pool": True,
         },
