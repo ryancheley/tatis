@@ -100,6 +100,8 @@ WSGI_APPLICATION = "tatisjr.wsgi.application"
 DATABASES = {
     "default": env.db(),
 }
+DATABASES["default"].setdefault("OPTIONS", {})
+DATABASES["default"]["OPTIONS"]["pool"] = None
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
