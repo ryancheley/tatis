@@ -23,7 +23,7 @@ dependencies = [
     "gunicorn",
     "MLB-StatsAPI",
     "prek",
-    "psycopg[binary]",
+    "psycopg[pool]",
     "pytest-cov",
     "pytest-django",
     "requests",
