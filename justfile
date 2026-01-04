@@ -47,11 +47,43 @@
 
 # runs the pre-commit check command
 @check:
-    pre-commit run --all-files
+    ruff check .
+    ruff format --check .
 
+# formats and fixes code with ruff
+@lint:
+    ruff check .
+    ruff format .
+
+# upgrades Django code to the target version
+@upgrade:
+    django-upgrade --target-version 3.14 .
 
 # install all needed packages and upgrade them too
 @pip:
     pip install -U pip
     pip-compile --resolver=backtracking --quiet --upgrade --output-file requirements.txt
     pip install -r requirements.txt
+
+# Docker commands
+@docker-build:
+    docker compose build
+
+@docker-up:
+    docker compose up -d
+
+@docker-down:
+    docker compose down
+
+@docker-logs:
+    docker compose logs -f
+
+@docker-shell:
+    docker compose exec web bash
+
+@docker-test:
+    docker compose run --rm web coverage run -m pytest
+    docker compose run --rm web coverage report
+
+@docker-clean:
+    docker compose down -v
