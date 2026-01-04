@@ -13,17 +13,21 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Create virtual environment
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
 # Install uv for faster dependency installation
-RUN pip install uv
+RUN pip install --upgrade pip uv
 
 # Set work directory
 WORKDIR /app
 
-# Copy dependency files
-COPY pyproject.toml ./
+# Copy project files
+COPY . .
 
 # Install Python dependencies
-RUN uv pip install --system .
+RUN uv pip install --no-cache-dir ".[dev]"
 
 # Runtime stage
 FROM python:3.14-slim
@@ -31,7 +35,8 @@ FROM python:3.14-slim
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    DJANGO_SETTINGS_MODULE=tatisjr.settings
+    DJANGO_SETTINGS_MODULE=tatisjr.settings \
+    PATH="/opt/venv/bin:$PATH"
 
 # Install runtime dependencies only
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -47,9 +52,8 @@ RUN useradd -m -u 1000 django && \
 # Set work directory
 WORKDIR /app
 
-# Copy Python packages from builder
-COPY --from=builder /usr/local/lib/python3.14/site-packages /usr/local/lib/python3.14/site-packages
-COPY --from=builder /usr/local/bin /usr/local/bin
+# Copy virtual environment from builder
+COPY --from=builder /opt/venv /opt/venv
 
 # Copy project files
 COPY --chown=django:django . .
