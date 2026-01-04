@@ -23,8 +23,8 @@ RUN pip install --upgrade pip uv
 # Set work directory
 WORKDIR /app
 
-# Copy dependency files
-COPY pyproject.toml ./
+# Copy project files
+COPY . .
 
 # Install Python dependencies
 RUN uv pip install --no-cache-dir ".[dev]"
