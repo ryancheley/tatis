@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "tatis"
@@ -16,23 +16,30 @@ dependencies = [
     "django-health-check",
     "django-model-info",
     "django-permissions-policy",
-    "django-upgrade",
     "djangorestframework",
     "djhtml",
-    "freezegun",
     "gunicorn",
     "MLB-StatsAPI",
-    "prek",
     "psycopg[pool]",
+    "requests",
+    "whitenoise",
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage>=7.0",
+    "django-upgrade>=1.13",
+    "freezegun",
+    "mutmut>=2.4",
+    "prek",
+    "pytest>=7.0",
     "pytest-cov",
     "pytest-django",
-    "requests",
-    "ruff",
-    "whitenoise",
+    "ruff>=0.6",
     "zizmor>=1.18.0",
 ]
 
-[tool.hatch.build.targets.wheel]
+[tool.setuptools]
 packages = ["content", "tatisjr"]
 
 [tool.ruff]
@@ -67,3 +74,6 @@ known-first-party = ["content", "tatisjr"]
 DJANGO_SETTINGS_MODULE = "tatisjr.settings"
 python_files = ["test_*.py"]
 addopts = "--reuse-db"
+
+[tool.coverage.report]
+fail_under = 95
