@@ -64,7 +64,7 @@ pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
-prek==0.2.27
+prek==0.2.30
     # via tatis (pyproject.toml)
 psycopg==3.3.2
     # via tatis (pyproject.toml)
@@ -94,7 +94,7 @@ requests==2.32.5
     #   mlb-statsapi
 rich==14.2.0
     # via django-model-info
-ruff==0.14.11
+ruff==0.14.13
     # via tatis (pyproject.toml)
 six==1.17.0
     # via python-dateutil
@@ -108,5 +108,5 @@ urllib3==2.6.3
     # via requests
 whitenoise==6.11.0
     # via tatis (pyproject.toml)
-zizmor==1.20.0
+zizmor==1.22.0
     # via tatis (pyproject.toml)
