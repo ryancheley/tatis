@@ -13,7 +13,7 @@ dependencies = [
     "django-csp",
     "django-environ",
     "django-extensions",
-    "django-health-check[db]",
+    "django-health-check",
     "django-model-info",
     "django-permissions-policy",
     "djangorestframework",
