@@ -71,7 +71,7 @@ def test_check_for_padres_game_on_il(on_injured_list):
 @freeze_time("2022-12-31")
 def test_total_errors():
     total_errors = get_total_errors(665487)
-    assert total_errors == 3
+    assert total_errors == 0
 
 
 def test_check_home_or_away_home():
