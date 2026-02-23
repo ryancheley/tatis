@@ -23,11 +23,11 @@ django-constance==4.3.4
     # via tatis (pyproject.toml)
 django-csp==4.0
     # via tatis (pyproject.toml)
-django-environ==0.12.1
+django-environ==0.13.0
     # via tatis (pyproject.toml)
 django-extensions==4.1
     # via tatis (pyproject.toml)
-django-health-check==4.0.0
+django-health-check==4.0.4
     # via tatis (pyproject.toml)
 django-model-info==2024.11.5
     # via tatis (pyproject.toml)
@@ -66,7 +66,7 @@ pluggy==1.6.0
     #   pytest-cov
 prek==0.3.3
     # via tatis (pyproject.toml)
-psycopg==3.3.2
+psycopg==3.3.3
     # via tatis (pyproject.toml)
 psycopg-pool==3.3.0
     # via psycopg
@@ -92,9 +92,9 @@ requests==2.32.5
     # via
     #   tatis (pyproject.toml)
     #   mlb-statsapi
-rich==14.3.2
+rich==14.3.3
     # via django-model-info
-ruff==0.15.1
+ruff==0.15.2
     # via tatis (pyproject.toml)
 six==1.17.0
     # via python-dateutil
