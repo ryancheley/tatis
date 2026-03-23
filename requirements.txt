@@ -4,13 +4,13 @@ asgiref==3.11.1
     # via
     #   django
     #   django-permissions-policy
-certifi==2026.1.4
+certifi==2026.2.25
     # via requests
-charset-normalizer==3.4.4
+charset-normalizer==3.4.6
     # via requests
-coverage==7.13.4
+coverage==7.13.5
     # via pytest-cov
-django==6.0.2
+django==6.0.3
     # via
     #   tatis (pyproject.toml)
     #   django-csp
@@ -19,23 +19,23 @@ django==6.0.2
     #   django-model-info
     #   django-permissions-policy
     #   djangorestframework
-django-constance==4.3.4
+django-constance==4.3.5
     # via tatis (pyproject.toml)
 django-csp==4.0
     # via tatis (pyproject.toml)
-django-environ==0.12.1
+django-environ==0.13.0
     # via tatis (pyproject.toml)
 django-extensions==4.1
     # via tatis (pyproject.toml)
-django-health-check==4.0.0
+django-health-check==4.2.1
     # via tatis (pyproject.toml)
-django-model-info==2024.11.5
+django-model-info==2026.3.1
     # via tatis (pyproject.toml)
 django-permissions-policy==4.28.0
     # via tatis (pyproject.toml)
-django-upgrade==1.29.1
+django-upgrade==1.30.0
     # via tatis (pyproject.toml)
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via tatis (pyproject.toml)
 djhtml==3.0.10
     # via tatis (pyproject.toml)
@@ -64,9 +64,9 @@ pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
-prek==0.3.3
+prek==0.3.8
     # via tatis (pyproject.toml)
-psycopg==3.3.2
+psycopg==3.3.3
     # via tatis (pyproject.toml)
 psycopg-pool==3.3.0
     # via psycopg
@@ -82,7 +82,7 @@ pytest==9.0.2
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==7.0.0
+pytest-cov==7.1.0
     # via tatis (pyproject.toml)
 pytest-django==4.12.0
     # via tatis (pyproject.toml)
@@ -92,9 +92,9 @@ requests==2.32.5
     # via
     #   tatis (pyproject.toml)
     #   mlb-statsapi
-rich==14.3.2
+rich==14.3.3
     # via django-model-info
-ruff==0.15.1
+ruff==0.15.7
     # via tatis (pyproject.toml)
 six==1.17.0
     # via python-dateutil
@@ -106,7 +106,7 @@ typing-extensions==4.15.0
     # via psycopg-pool
 urllib3==2.6.3
     # via requests
-whitenoise==6.11.0
+whitenoise==6.12.0
     # via tatis (pyproject.toml)
-zizmor==1.22.0
+zizmor==1.23.1
     # via tatis (pyproject.toml)
