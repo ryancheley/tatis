@@ -6,7 +6,7 @@ asgiref==3.11.1
     #   django-permissions-policy
 certifi==2026.2.25
     # via requests
-charset-normalizer==3.4.6
+charset-normalizer==3.4.7
     # via requests
 coverage==7.13.5
     # via pytest-cov
@@ -88,13 +88,13 @@ pytest-django==4.12.0
     # via tatis (pyproject.toml)
 python-dateutil==2.9.0.post0
     # via freezegun
-requests==2.33.0
+requests==2.33.1
     # via
     #   tatis (pyproject.toml)
     #   mlb-statsapi
 rich==14.3.3
     # via django-model-info
-ruff==0.15.8
+ruff==0.15.9
     # via tatis (pyproject.toml)
 six==1.17.0
     # via python-dateutil
