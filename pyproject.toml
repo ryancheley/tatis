@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68.0", "wheel"]
+requires = ["setuptools>=82.0.1", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -30,13 +30,13 @@ dev = [
     "coverage>=7.0",
     "django-upgrade>=1.13",
     "freezegun",
-    "mutmut>=2.4",
+    "mutmut>=3.5.0",
     "prek",
-    "pytest>=7.0",
+    "pytest>=9.0.3",
     "pytest-cov",
     "pytest-django",
-    "ruff>=0.6",
-    "zizmor>=1.18.0",
+    "ruff>=0.15.10",
+    "zizmor>=1.24.0",
 ]
 
 [tool.setuptools]
