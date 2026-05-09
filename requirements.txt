@@ -66,9 +66,9 @@ pluggy==1.6.0
     #   pytest-cov
 prek==0.3.11
     # via tatis (pyproject.toml)
-psycopg==3.3.3
+psycopg==3.3.4
     # via tatis (pyproject.toml)
-psycopg-pool==3.3.0
+psycopg-pool==3.3.1
     # via psycopg
 pydot==4.0.1
     # via django-model-info
