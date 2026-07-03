@@ -4,13 +4,13 @@ asgiref==3.11.1
     # via
     #   django
     #   django-permissions-policy
-certifi==2026.5.20
+certifi==2026.6.17
     # via requests
 charset-normalizer==3.4.7
     # via requests
-coverage==7.14.1
+coverage==7.14.3
     # via pytest-cov
-django==6.0.5
+django==6.0.6
     # via
     #   tatis (pyproject.toml)
     #   django-csp
@@ -23,17 +23,17 @@ django-constance==4.3.5
     # via tatis (pyproject.toml)
 django-csp==4.0
     # via tatis (pyproject.toml)
-django-environ==0.13.0
+django-environ==0.14.0
     # via tatis (pyproject.toml)
 django-extensions==4.1
     # via tatis (pyproject.toml)
-django-health-check==4.4.1
+django-health-check==4.4.3
     # via tatis (pyproject.toml)
 django-model-info==2026.3.1
     # via tatis (pyproject.toml)
-django-permissions-policy==4.30.0
+django-permissions-policy==4.32.0
     # via tatis (pyproject.toml)
-django-upgrade==1.30.0
+django-upgrade==1.31.1
     # via tatis (pyproject.toml)
 djangorestframework==3.17.1
     # via tatis (pyproject.toml)
@@ -43,7 +43,7 @@ freezegun==1.5.5
     # via tatis (pyproject.toml)
 gunicorn==26.0.0
     # via tatis (pyproject.toml)
-idna==3.17
+idna==3.18
     # via requests
 iniconfig==2.3.0
     # via pytest
@@ -64,7 +64,7 @@ pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
-prek==0.4.3
+prek==0.4.6
     # via tatis (pyproject.toml)
 psycopg==3.3.4
     # via tatis (pyproject.toml)
@@ -78,7 +78,7 @@ pygments==2.20.0
     #   rich
 pyparsing==3.3.2
     # via pydot
-pytest==9.0.3
+pytest==9.1.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -94,7 +94,7 @@ requests==2.34.2
     #   mlb-statsapi
 rich==15.0.0
     # via django-model-info
-ruff==0.15.15
+ruff==0.15.20
     # via tatis (pyproject.toml)
 six==1.17.0
     # via python-dateutil
@@ -108,5 +108,5 @@ urllib3==2.7.0
     # via requests
 whitenoise==6.12.0
     # via tatis (pyproject.toml)
-zizmor==1.25.2
+zizmor==1.26.1
     # via tatis (pyproject.toml)

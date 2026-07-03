@@ -27,16 +27,16 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "coverage>=7.14.1",
-    "django-upgrade>=1.13",
+    "coverage>=7.14.3",
+    "django-upgrade>=1.31.1",
     "freezegun",
-    "mutmut>=2.4",
+    "mutmut>=3.6.0",
     "prek",
-    "pytest>=9.0.3",
+    "pytest>=9.1.1",
     "pytest-cov",
     "pytest-django",
-    "ruff>=0.15.15",
-    "zizmor>=1.25.2",
+    "ruff>=0.15.20",
+    "zizmor>=1.26.1",
 ]
 
 [tool.setuptools]

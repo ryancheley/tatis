@@ -49,5 +49,3 @@ jobs:
         fi
     - name: Run tests
       uses: sjvrijn/pytest-last-failed@2e80af88a65052ccd45a1480472776466d3aecff
-      with:
-        pytest-args: '--last-failed'
