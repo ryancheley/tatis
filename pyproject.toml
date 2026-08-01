@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=82.0.1", "wheel"]
+requires = ["setuptools>=83.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -27,7 +27,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "coverage>=7.14.3",
+    "coverage>=7.15.2",
     "django-upgrade>=1.31.1",
     "freezegun",
     "mutmut>=3.6.0",
@@ -35,8 +35,8 @@ dev = [
     "pytest>=9.1.1",
     "pytest-cov",
     "pytest-django",
-    "ruff>=0.15.20",
-    "zizmor>=1.26.1",
+    "ruff>=0.16.0",
+    "zizmor>=1.28.0",
 ]
 
 [tool.setuptools]
