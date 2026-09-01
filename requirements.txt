@@ -6,11 +6,11 @@ asgiref==3.12.1
     #   django-permissions-policy
 certifi==2026.7.22
     # via requests
-charset-normalizer==3.4.9
+charset-normalizer==3.5.1
     # via requests
-coverage==7.15.2
+coverage==7.16.0
     # via pytest-cov
-django==6.0.7
+django==6.1
     # via
     #   tatis (pyproject.toml)
     #   django-csp
@@ -27,23 +27,23 @@ django-environ==0.14.0
     # via tatis (pyproject.toml)
 django-extensions==4.1
     # via tatis (pyproject.toml)
-django-health-check==4.4.4
+django-health-check==4.5.1
     # via tatis (pyproject.toml)
 django-model-info==2026.3.1
     # via tatis (pyproject.toml)
-django-permissions-policy==4.32.0
+django-permissions-policy==4.33.0
     # via tatis (pyproject.toml)
-django-upgrade==1.31.1
+django-upgrade==1.32.0
     # via tatis (pyproject.toml)
-djangorestframework==3.17.1
+djangorestframework==3.18.0
     # via tatis (pyproject.toml)
 djhtml==3.0.11
     # via tatis (pyproject.toml)
 freezegun==1.5.5
     # via tatis (pyproject.toml)
-gunicorn==26.0.0
+gunicorn==26.2.0
     # via tatis (pyproject.toml)
-idna==3.18
+idna==3.19
     # via requests
 iniconfig==2.3.0
     # via pytest
@@ -55,7 +55,7 @@ mlb-statsapi==1.9.0
     # via tatis (pyproject.toml)
 networkx==3.6.1
     # via django-model-info
-packaging==26.2
+packaging==26.3
     # via
     #   django-csp
     #   gunicorn
@@ -64,7 +64,7 @@ pluggy==1.6.0
     # via
     #   pytest
     #   pytest-cov
-prek==0.4.11
+prek==0.5.0
     # via tatis (pyproject.toml)
 psycopg==3.3.4
     # via tatis (pyproject.toml)
@@ -72,7 +72,7 @@ psycopg-pool==3.3.1
     # via psycopg
 pydot==4.0.1
     # via django-model-info
-pygments==2.20.0
+pygments==2.21.0
     # via
     #   pytest
     #   rich
@@ -84,7 +84,7 @@ pytest==9.1.1
     #   pytest-django
 pytest-cov==7.1.0
     # via tatis (pyproject.toml)
-pytest-django==4.12.0
+pytest-django==4.14.0
     # via tatis (pyproject.toml)
 python-dateutil==2.9.0.post0
     # via freezegun
@@ -94,11 +94,11 @@ requests==2.34.2
     #   mlb-statsapi
 rich==15.0.0
     # via django-model-info
-ruff==0.16.0
+ruff==0.16.5
     # via tatis (pyproject.toml)
 six==1.17.0
     # via python-dateutil
-sqlparse==0.5.5
+sqlparse==0.6.0
     # via django
 tokenize-rt==6.2.0
     # via django-upgrade
@@ -108,5 +108,5 @@ urllib3==2.7.0
     # via requests
 whitenoise==6.12.0
     # via tatis (pyproject.toml)
-zizmor==1.28.0
+zizmor==1.29.0
     # via tatis (pyproject.toml)
