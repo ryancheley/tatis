@@ -1,5 +1,5 @@
 # Build stage - Install dependencies
-FROM python:3.14-slim AS builder
+FROM python:3.15-slim AS builder
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -30,7 +30,7 @@ COPY . .
 RUN uv pip install --no-cache-dir ".[dev]"
 
 # Runtime stage
-FROM python:3.14-slim
+FROM python:3.15-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
