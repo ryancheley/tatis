@@ -36,7 +36,7 @@ dev = [
     "pytest-cov",
     "pytest-django",
     "ruff>=0.16.0",
-    "zizmor>=1.28.0",
+    "zizmor>=1.32.0",
 ]
 
 [tool.setuptools]
